@@ -27,7 +27,7 @@ const translations = {
     currentFamilies: 'Current Families We\'re Helping',
     
     // About
-    aboutTitle: 'About A House in Heavens',
+    aboutTitle: 'About A House Above',
     mission: 'To listen to God\'s commandment to help the ones in need. Love your neighbour as yourself.',
     aboutDescription: 'We are a faith-driven organization dedicated to building homes for extremely poor families and supporting their critical needs. Our work is guided by compassion, community, and the belief that everyone deserves a safe place to call home.',
     
@@ -93,7 +93,7 @@ const translations = {
     currentFamilies: 'Familiile pe Care le Ajutăm Acum',
     
     // About
-    aboutTitle: 'Despre A House in Heavens',
+    aboutTitle: 'Despre A House Above',
     mission: 'Să ascultăm porunca lui Dumnezeu de a-i ajuta pe cei în nevoie. Iubește-ți aproapele ca pe tine însuți.',
     aboutDescription: 'Suntem o organizație ghidată de credință, dedicată construirii de case pentru familii extrem de sărace și sprijinirii nevoilor lor critice. Munca noastră este ghidată de compasiune, comunitate și credința că toată lumea merită un loc sigur pe care să-l numească acasă.',
     

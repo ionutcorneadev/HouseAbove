@@ -28,7 +28,7 @@ const Footer = () => {
                   <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold">A House in Heavens</h3>
+              <h3 className="text-lg font-bold">A House Above</h3>
             </div>
             <p className="text-gray-300 mb-6">
               Building hope, one home at a time. Helping extremely poor families through faith and community.
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 A House in Heavens. All rights reserved.</p>
+          <p>&copy; 2024 A House Above. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -33,7 +33,7 @@ const Header = () => {
               </svg>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">A House in Heavens</h1>
+              <h1 className="text-xl font-bold text-gray-900">A House Above</h1>
             </div>
           </Link>
 
