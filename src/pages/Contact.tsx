@@ -1,26 +1,76 @@
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { t } = useLanguage();
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ success: boolean; message: string } | null>(null);
+  
+  // Initialize EmailJS once when component mounts
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    // The public key should be your complete EmailJS public key
+    emailjs.init("dwpbCyEYPyIFuQWdQ");
+    console.log("EmailJS initialized with public key: dwpbCyEYPyIFuQWdQ");
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Contact form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    // EmailJS configuration
+    const serviceId = 'service_fkkfzur';
+    const templateId = 'template_hsx3mbl';
+    
+    console.log('EmailJS Service ID:', serviceId);
+    console.log('EmailJS Template ID:', templateId);
+    
+    // Ensure form data is properly mapped to template variables
+    const templateParams = {
+      from_name: formData.name,
+      reply_to: formData.email,
+      message: formData.message
+    };
+    
+    // Log the data being sent for debugging
+    console.log('Sending email with data:', templateParams);
+    
+    // Send the email using EmailJS
+    console.log('Attempting to send email with EmailJS...');
+    emailjs.send(serviceId, templateId, templateParams)
+      .then((result) => {
+        console.log('Email sent successfully:', result);
+        setSubmitStatus({
+          success: true,
+          message: 'Thank you for your message! We will get back to you soon.'
+        });
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        console.error('Error details:', JSON.stringify(error));
+        setSubmitStatus({
+          success: false,
+          message: `There was an error sending your message: ${error.text || 'Unknown error'}`
+        });
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -51,11 +101,17 @@ const Contact = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
+                  {submitStatus && (
+                    <div className={`p-4 mb-4 rounded-md ${submitStatus.success ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
+                      {submitStatus.message}
+                    </div>
+                  )}
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <Label htmlFor="name">{t('name')}</Label>
                       <Input
                         id="name"
+                        name="name"
                         value={formData.name}
                         onChange={(e) => setFormData({...formData, name: e.target.value})}
                         placeholder="Enter your full name"
@@ -66,6 +122,7 @@ const Contact = () => {
                       <Label htmlFor="email">{t('email')}</Label>
                       <Input
                         id="email"
+                        name="email"
                         type="email"
                         value={formData.email}
                         onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -77,6 +134,7 @@ const Contact = () => {
                       <Label htmlFor="message">{t('message')}</Label>
                       <Textarea
                         id="message"
+                        name="message"
                         value={formData.message}
                         onChange={(e) => setFormData({...formData, message: e.target.value})}
                         placeholder="Tell us how we can help you or how you'd like to help us"
@@ -84,8 +142,12 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
-                      {t('send')}
+                    <Button 
+                      type="submit" 
+                      className="w-full bg-blue-600 hover:bg-blue-700"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Sending...' : t('send')}
                     </Button>
                   </form>
                 </CardContent>
@@ -206,7 +268,7 @@ const Contact = () => {
             <Button size="lg" className="bg-orange-500 hover:bg-orange-600 px-8 py-4 text-lg">
               {t('donateNow')}
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg">
+            <Button size="lg" variant="outline" className="border-white text-blue-600 hover:bg-gray-200 hover:text-blue-600 px-8 py-4 text-lg transition-colors duration-300 ease-in-out">
               Volunteer Today
             </Button>
           </div>

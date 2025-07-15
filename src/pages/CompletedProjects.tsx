@@ -178,7 +178,7 @@ const CompletedProjects = () => {
               </Button>
             </Link>
             <Link to="/projects">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-green-600 hover:bg-gray-200 hover:text-green-600 px-8 py-4 text-lg transition-colors duration-300 ease-in-out">
                 See Current Projects
               </Button>
             </Link>

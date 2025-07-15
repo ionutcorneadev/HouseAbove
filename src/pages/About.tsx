@@ -75,7 +75,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=600&h=400&fit=crop"
+                src="https://images.unsplash.com/photo-1616732651360-da08bee1e76c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Building homes"
                 className="rounded-lg shadow-lg"
               />
@@ -138,7 +138,7 @@ const About = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-blue-600 hover:bg-gray-200 hover:text-blue-600 px-8 py-4 text-lg transition-colors duration-300 ease-in-out">
                 Get Involved
               </Button>
             </Link>

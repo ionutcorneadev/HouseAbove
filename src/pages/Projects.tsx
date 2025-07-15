@@ -13,7 +13,7 @@ const Projects = () => {
       location: 'Rural Village, Romania',
       progress: 75,
       description: 'Building a 3-bedroom home for a family of 7. Construction is 75% complete with roofing and interior work remaining.',
-      image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=600&h=400&fit=crop',
+      image: 'https://plus.unsplash.com/premium_photo-1732139715619-d431c64c0b9f?q=80&w=1333&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       needed: '€2,500',
       raised: '€1,875'
     },
@@ -23,7 +23,7 @@ const Projects = () => {
       location: 'Mountain Region, Romania',
       progress: 40,
       description: 'Installing a water well and pump system to serve 15 families in a remote mountain community.',
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1699286720024-dcd3725b8d44?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       needed: '€4,000',
       raised: '€1,600'
     },
@@ -32,8 +32,8 @@ const Projects = () => {
       title: 'The Popescu Family Rebuild',
       location: 'Flood-affected area, Romania',
       progress: 20,
-      description: 'Rebuilding after devastating floods destroyed their home. Foundation work has begun.',
-      image: 'https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=600&h=400&fit=crop',
+      description: 'Rebuilding after devastating floods destroyed their home. Foundation work has already begun.',
+      image: 'https://images.unsplash.com/photo-1738683702747-c71b2feef445?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c21hbGwlMjBkZWNlbnQlMjBob3VzZSUyMGZvciUyMGZhbWlseXxlbnwwfHwwfHx8MA%3D%3D',
       needed: '€3,500',
       raised: '€700'
     },
@@ -43,7 +43,7 @@ const Projects = () => {
       location: 'Northern Romania',
       progress: 60,
       description: 'Urgent winterization project providing insulation and heating for 5 families before winter.',
-      image: 'https://images.unsplash.com/photo-1524230572899-a752b3835840?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1682376681622-7414455daa2c?q=80&w=685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       needed: '€1,800',
       raised: '€1,080'
     },
@@ -52,8 +52,8 @@ const Projects = () => {
       title: 'The Gheorghe Family Kitchen',
       location: 'Suburban Area, Romania',
       progress: 90,
-      description: 'Installing a proper kitchen with running water and cooking facilities for a family of 6.',
-      image: 'https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=600&h=400&fit=crop',
+      description: 'Installing a proper kitchen with running water and cooking facilities for a family of two parents and6 small children.',
+      image: 'https://images.unsplash.com/photo-1704338801455-6c01cfefffc9?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       needed: '€1,200',
       raised: '€1,080'
     },
@@ -63,7 +63,7 @@ const Projects = () => {
       location: 'Urban Area, Romania',
       progress: 30,
       description: 'Building wheelchair accessibility ramp for disabled family member to access their home safely.',
-      image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1740511106289-7a53deb26b17?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       needed: '€800',
       raised: '€240'
     }

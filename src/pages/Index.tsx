@@ -27,7 +27,7 @@ const Index = () => {
                 </Button>
               </Link>
               <Link to="/projects">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg">
+                <Button size="lg" variant="outline" className="border-white text-blue-600 hover:bg-gray-200 hover:text-blue-600 px-8 py-4 text-lg transition-colors duration-300 ease-in-out">
                   {t('supportFamily')}
                 </Button>
               </Link>
@@ -55,7 +55,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-blue-600 hover:bg-gray-200 hover:text-blue-600 px-8 py-4 text-lg transition-colors duration-300 ease-in-out">
                 Get Involved
               </Button>
             </Link>
